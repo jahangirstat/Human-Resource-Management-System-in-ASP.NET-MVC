@@ -1,0 +1,107 @@
+﻿@model MVCFinalProject.Models.Transfer_Info
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transfer_Info</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OldDepartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldDepartment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewDepartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewDepartment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OldDivision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldDivision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewDivision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewDivision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OldSection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OldSection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NewSection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NewSection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransferActiveDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransferActiveDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransferDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransferDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TransferID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

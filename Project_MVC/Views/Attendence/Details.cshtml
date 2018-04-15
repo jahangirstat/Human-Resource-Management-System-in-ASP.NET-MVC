@@ -1,0 +1,83 @@
+﻿@model MVCFinalProject.Models.Attendence
+
+@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Attendence</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.InTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.OutTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.OutTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.InTime_Lanch)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.InTime_Lanch)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.OutTime_Lanch)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.OutTime_Lanch)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Attend_Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Attend_Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Statuss)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Statuss)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Employee.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Employee.Name)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

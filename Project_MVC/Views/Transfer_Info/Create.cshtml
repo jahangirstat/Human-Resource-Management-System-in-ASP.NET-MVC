@@ -1,0 +1,117 @@
+﻿@model MVCFinalProject.Models.Transfer_Info
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Transfer_Info</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EmpID, "EmpID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("EmpID", String.Empty)
+                @Html.ValidationMessageFor(model => model.EmpID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OldDepartment, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OldDepartment)
+                @Html.ValidationMessageFor(model => model.OldDepartment)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewDepartment, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NewDepartment)
+                @Html.ValidationMessageFor(model => model.NewDepartment)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OldDivision, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OldDivision)
+                @Html.ValidationMessageFor(model => model.OldDivision)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewDivision, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NewDivision)
+                @Html.ValidationMessageFor(model => model.NewDivision)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OldSection, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.OldSection)
+                @Html.ValidationMessageFor(model => model.OldSection)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NewSection, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NewSection)
+                @Html.ValidationMessageFor(model => model.NewSection)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TransferActiveDate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TransferActiveDate)
+                @Html.ValidationMessageFor(model => model.TransferActiveDate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TransferDate, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TransferDate)
+                @Html.ValidationMessageFor(model => model.TransferDate)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Remark, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Remark)
+                @Html.ValidationMessageFor(model => model.Remark)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StatusState, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StatusState)
+                @Html.ValidationMessageFor(model => model.StatusState)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

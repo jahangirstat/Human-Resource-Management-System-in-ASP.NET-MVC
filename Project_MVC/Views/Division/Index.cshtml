@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MVCFinalProject.Models.Division>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Division_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.CName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Division_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.CName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DivID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DivID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DivID })
+        </td>
+    </tr>
+}
+
+</table>

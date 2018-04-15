@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVC4ProjectModelStoreContainer" CdmEntityContainer="MVC4ProjectEntities2">
+    <EntitySetMapping Name="Attendences">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Attendence">
+        <MappingFragment StoreEntitySet="Attendence">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="InTime" ColumnName="InTime" />
+          <ScalarProperty Name="OutTime" ColumnName="OutTime" />
+          <ScalarProperty Name="InTime_Lanch" ColumnName="InTime_Lanch" />
+          <ScalarProperty Name="OutTime_Lanch" ColumnName="OutTime_Lanch" />
+          <ScalarProperty Name="Attend_Date" ColumnName="Attend_Date" />
+          <ScalarProperty Name="Statuss" ColumnName="Statuss" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Benefits">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Benefit">
+        <MappingFragment StoreEntitySet="Benefit">
+          <ScalarProperty Name="Benefit_ID" ColumnName="Benefit_ID" />
+          <ScalarProperty Name="Benefit_Type" ColumnName="Benefit_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="CName" ColumnName="CName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DID" ColumnName="DID" />
+          <ScalarProperty Name="DName" ColumnName="DName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Designation">
+        <MappingFragment StoreEntitySet="Designation">
+          <ScalarProperty Name="DesId" ColumnName="DesId" />
+          <ScalarProperty Name="DesName" ColumnName="DesName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Divisions">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Division">
+        <MappingFragment StoreEntitySet="Division">
+          <ScalarProperty Name="DivID" ColumnName="DivID" />
+          <ScalarProperty Name="Division_Name" ColumnName="Division_Name" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+          <ScalarProperty Name="Mother_Name" ColumnName="Mother_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Maritual_status" ColumnName="Maritual_status" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Home_phone" ColumnName="Home_phone" />
+          <ScalarProperty Name="Present_address" ColumnName="Present_address" />
+          <ScalarProperty Name="parmanent_address" ColumnName="parmanent_address" />
+          <ScalarProperty Name="DID" ColumnName="DID" />
+          <ScalarProperty Name="DesId" ColumnName="DesId" />
+          <ScalarProperty Name="SecID" ColumnName="SecID" />
+          <ScalarProperty Name="DivID" ColumnName="DivID" />
+          <ScalarProperty Name="Benefit_ID" ColumnName="Benefit_ID" />
+          <ScalarProperty Name="EmployeeType_ID" ColumnName="EmployeeType_ID" />
+          <ScalarProperty Name="GID" ColumnName="GID" />
+          <ScalarProperty Name="Gross_Salary" ColumnName="Gross_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Type">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Employee_Type">
+        <MappingFragment StoreEntitySet="Employee_Type">
+          <ScalarProperty Name="EmployeeType_ID" ColumnName="EmployeeType_ID" />
+          <ScalarProperty Name="Employee_Types" ColumnName="Employee_Types" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grades">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Grade">
+        <MappingFragment StoreEntitySet="Grade">
+          <ScalarProperty Name="GID" ColumnName="GID" />
+          <ScalarProperty Name="Grade_Name" ColumnName="Grade_Name" />
+          <ScalarProperty Name="Grade_Salary" ColumnName="Grade_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Promotions">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Promotion">
+        <MappingFragment StoreEntitySet="Promotion">
+          <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="Promotion_type" ColumnName="Promotion_type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Active_date" ColumnName="Active_date" />
+          <ScalarProperty Name="promotion_active" ColumnName="promotion_active" />
+          <ScalarProperty Name="Basics" ColumnName="Basics" />
+          <ScalarProperty Name="House_Rent" ColumnName="House_Rent" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="Convences" ColumnName="Convences" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Gross_Salary" ColumnName="Gross_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryHeads">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.SalaryHead">
+        <MappingFragment StoreEntitySet="SalaryHead">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Head_Name" ColumnName="Head_Name" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryHistories">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.SalaryHistory">
+        <MappingFragment StoreEntitySet="SalaryHistory">
+          <ScalarProperty Name="SalaryHistoryID" ColumnName="SalaryHistoryID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="Dates" ColumnName="Dates" />
+          <ScalarProperty Name="Basics" ColumnName="Basics" />
+          <ScalarProperty Name="HouseRent" ColumnName="HouseRent" />
+          <ScalarProperty Name="Medical" ColumnName="Medical" />
+          <ScalarProperty Name="Convences" ColumnName="Convences" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Gross_Salary" ColumnName="Gross_Salary" />
+          <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Section">
+        <MappingFragment StoreEntitySet="Section">
+          <ScalarProperty Name="SecID" ColumnName="SecID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transfer_Info">
+      <EntityTypeMapping TypeName="MVC4ProjectModel.Transfer_Info">
+        <MappingFragment StoreEntitySet="Transfer_Info">
+          <ScalarProperty Name="TransferID" ColumnName="TransferID" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="OldDepartment" ColumnName="OldDepartment" />
+          <ScalarProperty Name="NewDepartment" ColumnName="NewDepartment" />
+          <ScalarProperty Name="OldDivision" ColumnName="OldDivision" />
+          <ScalarProperty Name="NewDivision" ColumnName="NewDivision" />
+          <ScalarProperty Name="OldSection" ColumnName="OldSection" />
+          <ScalarProperty Name="NewSection" ColumnName="NewSection" />
+          <ScalarProperty Name="TransferActiveDate" ColumnName="TransferActiveDate" />
+          <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="StatusState" ColumnName="StatusState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MVCFinalProject.Models.Promotion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Promotion_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.promotion_active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Basics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.House_Rent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medical)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Convences)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Taxes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gross_Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Promotion_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.promotion_active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Basics)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House_Rent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medical)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Convences)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Taxes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gross_Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PromotionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PromotionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PromotionID })
+        </td>
+    </tr>
+}
+
+</table>

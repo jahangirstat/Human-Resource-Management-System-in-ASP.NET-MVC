@@ -1,0 +1,91 @@
+﻿@model MVCFinalProject.Models.SalaryHistory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalaryHistory</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dates)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dates)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseRent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseRent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convences)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convences)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gross_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gross_Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Promotion.Promotion_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promotion.Promotion_type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalaryHistoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

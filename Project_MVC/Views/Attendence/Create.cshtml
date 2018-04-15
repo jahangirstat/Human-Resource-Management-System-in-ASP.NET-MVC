@@ -1,0 +1,93 @@
+﻿@model MVCFinalProject.Models.Attendence
+
+@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Attendence</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.InTime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.InTime)
+                    @Html.ValidationMessageFor(model => model.InTime)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.OutTime, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.OutTime)
+                    @Html.ValidationMessageFor(model => model.OutTime)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.InTime_Lanch, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.InTime_Lanch)
+                    @Html.ValidationMessageFor(model => model.InTime_Lanch)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.OutTime_Lanch, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.OutTime_Lanch)
+                    @Html.ValidationMessageFor(model => model.OutTime_Lanch)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Attend_Date, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Attend_Date)
+                    @Html.ValidationMessageFor(model => model.Attend_Date)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Statuss, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Statuss)
+                    @Html.ValidationMessageFor(model => model.Statuss)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.EmpID, "EmpID", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("EmpID", String.Empty)
+                    @Html.ValidationMessageFor(model => model.EmpID)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

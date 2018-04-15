@@ -1,0 +1,113 @@
+﻿@model MVCFinalProject.Models.Promotion
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Promotion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Promotion_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promotion_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.promotion_active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.promotion_active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.House_Rent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.House_Rent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convences)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convences)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gross_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gross_Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

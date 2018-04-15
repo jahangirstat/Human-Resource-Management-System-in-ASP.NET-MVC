@@ -1,0 +1,94 @@
+﻿@model IEnumerable<MVCFinalProject.Models.Transfer_Info>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OldDepartment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewDepartment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OldDivision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewDivision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OldSection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewSection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransferActiveDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransferDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OldDepartment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewDepartment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OldDivision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewDivision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OldSection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewSection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransferActiveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransferDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TransferID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TransferID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TransferID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56eeac33e3604f11b8b61b0eee9605c5" Name="Diagram1">
+        <EntityTypeShape EntityType="MVC4ProjectModel.Attendence" Width="1.5" PointX="5.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Benefit" Width="1.5" PointX="1.125" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Company" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Department" Width="1.5" PointX="2.875" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Designation" Width="1.5" PointX="1.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Division" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Employee" Width="1.5" PointX="3.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Employee_Type" Width="1.5" PointX="3" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Grade" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Promotion" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.SalaryHead" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.SalaryHistory" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Section" Width="1.5" PointX="6.5" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MVC4ProjectModel.Transfer_Info" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Attendenc__EmpID__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__Benefi__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Division__CID__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__DID__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__DesId__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__DivID__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__Employ__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__GID__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Employee__SecID__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Promotion__EmpID__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__SalaryHis__EmpID__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__Transfer___EmpID__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="MVC4ProjectModel.FK__SalaryHis__Promo__2F10007B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

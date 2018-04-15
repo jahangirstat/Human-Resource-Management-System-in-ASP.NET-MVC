@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Human Resource Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td colspan="2">
+                <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #d7eadc;border:none">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink("HRMS Application", "Index", "Test", null, new { @class = "navbar-brand" })
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav"></ul>
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:30px">
+            </td>
+            <td style="width:850px">
+                <div class="container body-content">
+                    <div class="container control-label">
+                        <div>
+                            <img src="~/Images/Employee1.jpg" style="width: 95%; height: 250px;" />
+                        </div>
+                        <div class="col-md-6">
+
+                            <h2>
+                                Employee engagement and performance: Is there a relation?
+                            </h2>
+                            <p>
+                                One Question that has witnessed many debates is why should organizations put resources into Employee engagement? The most appropriate and simple response is because employee engagement is related essentially to critical business results.
+                            </p>
+                            <p>Studies have revealed positive relationship between employee engagement and organizational results: productivity, employee retention, customer loyalty and profitability</p>
+                            <p>When employees are engaged, they are aware of their responsibilities in organizational goals and motivate their co-workers for the achievement of those objectives. Going an extra mile at the workplace is a sign of a highly engaged employee.</p>
+                            <p>
+                                To de-code whether employees are engaged, employees are usually solicited to rate their views of various work environment factors:
+                            </p>
+                            <ul>
+                                <li>Do I have the chance to perform the best work every day?</li>
+                                <li>Am I surrounded by an empowering and stable group?</li>
+                                <li>Is the organization’s main goal planned, which empowers me to feel my part in the workplace is critical?</li>
+                                <li>Are my perspectives and opinions heard?</li>
+                            </ul>
+                            <p>
+                                Not only does an exceedingly engaged workforce decrease turnover and employing costs, but also guarantees execution development and permanence in the marketplace.
+                            </p>
+                            <p>
+                                The research additionally indicates that the more engaged employees are, the more probable their organization is to surpass their respective industry averages in their net revenue growth.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="~/Images/Engagement-Speaker-Testimonial-1400.jpg" style="width: 100%;" />
+                        </div>
+                        <hr />
+                        <footer style="overflow:hidden">
+                            <p>&copy; @DateTime.Now.Year - Human Resource Application</p>
+                        </footer>
+                    </div>
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - Human Resource Application</p>
+                    </footer>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

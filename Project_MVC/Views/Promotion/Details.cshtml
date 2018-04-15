@@ -1,0 +1,107 @@
+﻿@model MVCFinalProject.Models.Promotion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Promotion</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Promotion_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Promotion_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.promotion_active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.promotion_active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.House_Rent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.House_Rent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Convences)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Convences)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gross_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gross_Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PromotionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

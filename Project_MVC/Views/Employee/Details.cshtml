@@ -1,0 +1,187 @@
+﻿@model MVCFinalProject.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Father_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Father_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mother_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mother_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Maritual_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Maritual_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Home_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Home_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Present_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Present_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parmanent_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parmanent_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gross_Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gross_Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Benefit.Benefit_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Benefit.Benefit_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation.DesName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation.DesName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Division.Division_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Division.Division_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Type.Employee_Types)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Type.Employee_Types)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade.Grade_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grade.Grade_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Section.Section_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section.Section_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

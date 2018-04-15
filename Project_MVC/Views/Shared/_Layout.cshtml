@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Human Resource Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td colspan="2">
+                <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #d8cbcb;">
+                    <div class=" container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("HRMS Application", "Index", "Home", null, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav"></ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+        
+            <td style="width: 10%; background-color: #b9a7a7;">
+                <ul class="list-group" style="list-style-type:none">
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Attendence", "Index", "Attendence")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Benefit", "Index", "Benefit")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Company", "Index", "Company")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Designation", "Index", "Designation")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Department", "Index", "Department")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Division", "Index", "Division")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Employee", "Index", "Employee")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Employee Type", "Index", "Employee_Type")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("SalaryHead ", "Index", "SalaryHead")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Promotion", "Index", "Promotion")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Salary History ", "Index", "SalaryHistory")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Section", "Index", "Section")</li>
+                    <li style="margin-bottom: 2px; background: #d8cbcb; padding: 2px 5px; text-decoration: none; text-align: center; ">@Html.ActionLink("Transfer Info", "Index", "Transfer_Info")</li>
+
+
+                </ul>
+            </td>
+            <td style="width:85%">
+                <div style="padding:10px 20px">
+                    @RenderBody()
+                    <hr />
+                    <footer>
+                        <p>&copy; @DateTime.Now.Year - Human Resource Application</p>
+                    </footer>
+                </div>
+            </td>
+        </tr>
+    </table>
+  
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

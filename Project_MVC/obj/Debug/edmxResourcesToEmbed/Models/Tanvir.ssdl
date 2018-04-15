@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVC4ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Attendence">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InTime" Type="varchar" MaxLength="20" />
+    <Property Name="OutTime" Type="varchar" MaxLength="20" />
+    <Property Name="InTime_Lanch" Type="varchar" MaxLength="20" />
+    <Property Name="OutTime_Lanch" Type="varchar" MaxLength="20" />
+    <Property Name="Attend_Date" Type="datetime" />
+    <Property Name="Statuss" Type="varchar" MaxLength="20" />
+    <Property Name="EmpID" Type="int" />
+  </EntityType>
+  <EntityType Name="Benefit">
+    <Key>
+      <PropertyRef Name="Benefit_ID" />
+    </Key>
+    <Property Name="Benefit_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Benefit_Type" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CName" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DID" />
+    </Key>
+    <Property Name="DID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesId" />
+    </Key>
+    <Property Name="DesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DesName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Division">
+    <Key>
+      <PropertyRef Name="DivID" />
+    </Key>
+    <Property Name="DivID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Division_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="CID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="Father_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Mother_Name" Type="varchar" MaxLength="200" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Nationality" Type="varchar" MaxLength="100" />
+    <Property Name="Maritual_status" Type="varchar" MaxLength="100" />
+    <Property Name="Religion" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="300" />
+    <Property Name="Home_phone" Type="varchar" MaxLength="50" />
+    <Property Name="Present_address" Type="varchar" MaxLength="1000" />
+    <Property Name="parmanent_address" Type="varchar" MaxLength="1000" />
+    <Property Name="DID" Type="int" />
+    <Property Name="DesId" Type="int" />
+    <Property Name="SecID" Type="int" />
+    <Property Name="DivID" Type="int" />
+    <Property Name="Benefit_ID" Type="int" />
+    <Property Name="EmployeeType_ID" Type="int" />
+    <Property Name="GID" Type="int" />
+    <Property Name="Gross_Salary" Type="float" />
+  </EntityType>
+  <EntityType Name="Employee_Type">
+    <Key>
+      <PropertyRef Name="EmployeeType_ID" />
+    </Key>
+    <Property Name="EmployeeType_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Types" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grade">
+    <Key>
+      <PropertyRef Name="GID" />
+    </Key>
+    <Property Name="GID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grade_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Grade_Salary" Type="int" />
+  </EntityType>
+  <EntityType Name="Promotion">
+    <Key>
+      <PropertyRef Name="PromotionID" />
+    </Key>
+    <Property Name="PromotionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="Promotion_type" Type="varchar" MaxLength="100" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Active_date" Type="datetime" />
+    <Property Name="promotion_active" Type="datetime" />
+    <Property Name="Basics" Type="money" />
+    <Property Name="House_Rent" Type="money" />
+    <Property Name="Medical" Type="money" />
+    <Property Name="Convences" Type="money" />
+    <Property Name="Taxes" Type="money" />
+    <Property Name="Gross_Salary" Type="money" />
+  </EntityType>
+  <EntityType Name="SalaryHead">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Head_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Rate" Type="float" />
+    <Property Name="Activity" Type="bit" />
+  </EntityType>
+  <EntityType Name="SalaryHistory">
+    <Key>
+      <PropertyRef Name="SalaryHistoryID" />
+    </Key>
+    <Property Name="SalaryHistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="Dates" Type="datetime" />
+    <Property Name="Basics" Type="money" />
+    <Property Name="HouseRent" Type="money" />
+    <Property Name="Medical" Type="money" />
+    <Property Name="Convences" Type="money" />
+    <Property Name="Taxes" Type="money" />
+    <Property Name="Gross_Salary" Type="money" />
+    <Property Name="PromotionID" Type="int" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="SecID" />
+    </Key>
+    <Property Name="SecID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Section_Name" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Transfer_Info">
+    <Key>
+      <PropertyRef Name="TransferID" />
+    </Key>
+    <Property Name="TransferID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="int" />
+    <Property Name="OldDepartment" Type="varchar" MaxLength="50" />
+    <Property Name="NewDepartment" Type="varchar" MaxLength="50" />
+    <Property Name="OldDivision" Type="varchar" MaxLength="50" />
+    <Property Name="NewDivision" Type="varchar" MaxLength="50" />
+    <Property Name="OldSection" Type="varchar" MaxLength="50" />
+    <Property Name="NewSection" Type="varchar" MaxLength="50" />
+    <Property Name="TransferActiveDate" Type="datetime" />
+    <Property Name="TransferDate" Type="datetime" />
+    <Property Name="Remark" Type="varchar" MaxLength="50" />
+    <Property Name="StatusState" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__Attendenc__EmpID__34C8D9D1">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Attendence" Type="Self.Attendence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpID" />
+      </Principal>
+      <Dependent Role="Attendence">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Division__CID__182C9B23">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Division" Type="Self.Division" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CID" />
+      </Principal>
+      <Dependent Role="Division">
+        <PropertyRef Name="CID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Benefi__267ABA7A">
+    <End Role="Benefit" Type="Self.Benefit" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Benefit">
+        <PropertyRef Name="Benefit_ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Benefit_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__DesId__239E4DCF">
+    <End Role="Designation" Type="Self.Designation" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designation">
+        <PropertyRef Name="DesId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__DID__22AA2996">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__DivID__25869641">
+    <End Role="Division" Type="Self.Division" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division">
+        <PropertyRef Name="DivID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DivID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Employ__276EDEB3">
+    <End Role="Employee_Type" Type="Self.Employee_Type" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Type">
+        <PropertyRef Name="EmployeeType_ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="EmployeeType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__GID__286302EC">
+    <End Role="Grade" Type="Self.Grade" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grade">
+        <PropertyRef Name="GID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="GID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__SecID__24927208">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="SecID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="SecID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Promotion__EmpID__2B3F6F97">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Promotion" Type="Self.Promotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpID" />
+      </Principal>
+      <Dependent Role="Promotion">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalaryHis__EmpID__2E1BDC42">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="SalaryHistory" Type="Self.SalaryHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpID" />
+      </Principal>
+      <Dependent Role="SalaryHistory">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalaryHis__Promo__2F10007B">
+    <End Role="Promotion" Type="Self.Promotion" Multiplicity="0..1" />
+    <End Role="SalaryHistory" Type="Self.SalaryHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Promotion">
+        <PropertyRef Name="PromotionID" />
+      </Principal>
+      <Dependent Role="SalaryHistory">
+        <PropertyRef Name="PromotionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transfer___EmpID__31EC6D26">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Transfer_Info" Type="Self.Transfer_Info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmpID" />
+      </Principal>
+      <Dependent Role="Transfer_Info">
+        <PropertyRef Name="EmpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MVC4ProjectModelStoreContainer">
+    <EntitySet Name="Attendence" EntityType="Self.Attendence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Benefit" EntityType="Self.Benefit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Designation" EntityType="Self.Designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Division" EntityType="Self.Division" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Type" EntityType="Self.Employee_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grade" EntityType="Self.Grade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Promotion" EntityType="Self.Promotion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalaryHead" EntityType="Self.SalaryHead" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalaryHistory" EntityType="Self.SalaryHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transfer_Info" EntityType="Self.Transfer_Info" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Attendenc__EmpID__34C8D9D1" Association="Self.FK__Attendenc__EmpID__34C8D9D1">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Attendence" EntitySet="Attendence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Division__CID__182C9B23" Association="Self.FK__Division__CID__182C9B23">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Division" EntitySet="Division" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Benefi__267ABA7A" Association="Self.FK__Employee__Benefi__267ABA7A">
+      <End Role="Benefit" EntitySet="Benefit" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__DesId__239E4DCF" Association="Self.FK__Employee__DesId__239E4DCF">
+      <End Role="Designation" EntitySet="Designation" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__DID__22AA2996" Association="Self.FK__Employee__DID__22AA2996">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__DivID__25869641" Association="Self.FK__Employee__DivID__25869641">
+      <End Role="Division" EntitySet="Division" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Employ__276EDEB3" Association="Self.FK__Employee__Employ__276EDEB3">
+      <End Role="Employee_Type" EntitySet="Employee_Type" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__GID__286302EC" Association="Self.FK__Employee__GID__286302EC">
+      <End Role="Grade" EntitySet="Grade" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__SecID__24927208" Association="Self.FK__Employee__SecID__24927208">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Promotion__EmpID__2B3F6F97" Association="Self.FK__Promotion__EmpID__2B3F6F97">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Promotion" EntitySet="Promotion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalaryHis__EmpID__2E1BDC42" Association="Self.FK__SalaryHis__EmpID__2E1BDC42">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="SalaryHistory" EntitySet="SalaryHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalaryHis__Promo__2F10007B" Association="Self.FK__SalaryHis__Promo__2F10007B">
+      <End Role="Promotion" EntitySet="Promotion" />
+      <End Role="SalaryHistory" EntitySet="SalaryHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transfer___EmpID__31EC6D26" Association="Self.FK__Transfer___EmpID__31EC6D26">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Transfer_Info" EntitySet="Transfer_Info" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
